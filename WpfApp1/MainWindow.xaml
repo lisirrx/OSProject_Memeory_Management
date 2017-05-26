@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Memory Replacement" Height="350" Width="525">
+    <Grid>
+        <TextBlock Name="Block0" Text="{Binding Path=Frame0}" HorizontalAlignment="Left" Margin="76,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <Label Content="0" HorizontalAlignment="Left" Margin="43,37,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="Block1" Text="{Binding Path=Frame1}" HorizontalAlignment="Left" Margin="76,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="1" HorizontalAlignment="Left" Margin="43,68,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="Block2" Text="{Binding Path=Frame2}" HorizontalAlignment="Left" Margin="76,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="43,99,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="Block3" Text="{Binding Path=Frame3}" HorizontalAlignment="Left" Margin="76,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="43,130,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="current" Text="{Binding Path=Current}" HorizontalAlignment="Left" Margin="416,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Current Instruction" HorizontalAlignment="Left" Margin="281,37,0,0" VerticalAlignment="Top" Width="112"/>
+        <TextBlock  Name="next" Text="{Binding Path=Next}" HorizontalAlignment="Left" Margin="416,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Next Instruction" HorizontalAlignment="Left" Margin="281,68,0,0" VerticalAlignment="Top" Width="112"/>
+        <TextBlock x:Name="Page_Fault_Rate"  Text="{Binding Path=Rate}" HorizontalAlignment="Left" Margin="416,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Page Fault Rate" HorizontalAlignment="Left" Margin="281,196,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button Content="Start" HorizontalAlignment="Left" Margin="43,202,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBlock Name="AC" HorizontalAlignment="Left" Margin="478,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Path=AccessCount}"/>
+        <TextBlock Name="PC" HorizontalAlignment="Left" Margin="445,201,0,0" TextWrapping="Wrap" Text="{Binding Path=PageFaultCount}" VerticalAlignment="Top"/>
+        <Label Content="/" HorizontalAlignment="Left" Margin="464,196,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
